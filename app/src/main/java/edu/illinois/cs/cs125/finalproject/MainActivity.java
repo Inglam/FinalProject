@@ -7,14 +7,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
-import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
     /**
@@ -55,11 +53,17 @@ public class MainActivity extends AppCompatActivity {
                 Log.d(TAG, "Open Settings");
                 Snackbar message = Snackbar.make(findViewById(R.id.Settings), "Successfully clicked this button!", Snackbar.LENGTH_SHORT);
                 message.show();
+                setnewgoal(findViewById(R.id.Settings));
             }
         });
 
     }
-    
+
+    public void setnewgoal(View view) {
+        Intent intent = new Intent(this, SetUpYourGoal.class);
+        startActivity(intent);
+    }
+
     private void initUI() {
         linear_layout_1 = findViewById(R.id.linear_layout_1);
         linear_layout_2 = findViewById(R.id.linear_layout_2);
