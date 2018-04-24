@@ -1,6 +1,7 @@
 package edu.illinois.cs.cs125.finalproject;
 
 import android.nfc.Tag;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -40,7 +41,9 @@ public class MainActivity extends AppCompatActivity {
         openSideBar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View v) {
-                Log.d(TAG, "Trick or Treat!");
+                Log.d(TAG, "Open Side Bar");
+                Snackbar message = Snackbar.make(findViewById(R.id.SideBar), "Successfully clicked this button!", Snackbar.LENGTH_SHORT);
+                message.show();
             }
         });
 
@@ -49,12 +52,14 @@ public class MainActivity extends AppCompatActivity {
         openSettings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (final View v){
-                Log.d(TAG, "Please set your date!");
+                Log.d(TAG, "Open Settings");
+                Snackbar message = Snackbar.make(findViewById(R.id.Settings), "Successfully clicked this button!", Snackbar.LENGTH_SHORT);
+                message.show();
             }
         });
 
     }
-
+    
     private void initUI() {
         linear_layout_1 = findViewById(R.id.linear_layout_1);
         linear_layout_2 = findViewById(R.id.linear_layout_2);
