@@ -16,7 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SetUpYourGoal"></activity>
+        <activity android:name=".SetUpYourGoal"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_AVTIVITY"
+                android:value=".MainActivity" />
+        </activity>
     </application>
 
 </manifest>

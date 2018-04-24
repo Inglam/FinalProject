@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#bebdbd"
     android:gravity="center_horizontal"
-    android:background="@android:color/white"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -34,14 +34,13 @@
             android:layout_width="10dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="setnewgoal"
             app:srcCompat="@android:drawable/ic_menu_manage" />
     </LinearLayout>
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="match_parent"
-        android:layout_height="61dp"
+        android:layout_height="93dp"
         android:text="The Title" />
 
     <LinearLayout
@@ -67,7 +66,7 @@
         android:id="@+id/linear_layout_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/black"
+        android:background="#a5a4a7"
         android:visibility="visible">
 
         <LinearLayout
@@ -136,7 +135,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="00"
-                android:textColor="@android:color/white"
+                android:textColor="#ffffff"
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
@@ -163,7 +162,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="00"
-                android:textColor="@android:color/white"
+                android:textColor="#ff0000"
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
@@ -204,5 +203,39 @@
         </android.support.design.widget.TextInputLayout>
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="337dp"
+        android:layout_height="55dp"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            style="@android:style/Widget.Holo.CompoundButton.CheckBox"
+            android:layout_width="24dp"
+            android:layout_height="55dp"
+            android:layout_weight="1" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="280dp"
+            android:layout_height="55dp"
+            android:layout_weight="1">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Type your goal"
+                android:inputType="textCapSentences" />
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:clickable="true"
+        app:backgroundTint="?attr/colorControlNormal"
+        app:elevation="10dp"
+        app:srcCompat="@android:drawable/ic_menu_add" />
 
 </LinearLayout>
